@@ -2,16 +2,14 @@
 function createIMG() {
 	var leftside=document.getElementById('leftside')
 	for (var i = 0; i < 6; i++) {
-		var mininIMG=document.createElement("img");
-		mininIMG.src="minion.png";
-		mininIMG.style.top=((Math.floor((Math.random() * 370) + 1)).toString()) + "px";
-		mininIMG.style.left= ((Math.floor((Math.random() * 400) + 1)).toString()) + "px";
-		leftside.append(mininIMG);
+		createmin();
 
 	}
 	var rightside=document.getElementById('rightside');
 	leftsideIMGs=leftside.cloneNode(true);
 	rightside.append(leftsideIMGs);
+	var lastimg=document.getElementById('rightside')[0];
+	lastimg.parentNode.removeChild(lastimg)
 	// body...
 }
 function createmin() {
