@@ -3,15 +3,14 @@ function createIMG() {
 	var leftside=document.getElementById('leftside')
 	for (var i = 0; i < 6; i++) {
 		createmin();
-
 	}
 	var rightside=document.getElementById('rightside');
 	leftsideIMGs=leftside.cloneNode(true);
+	leftsideIMGs.removeChild(leftsideIMGs.lastChild);
 	rightside.append(leftsideIMGs);
-	var lastimg=document.getElementById('rightside')[0];
-	lastimg.parentNode.removeChild(lastimg)
 	// body...
 }
+
 function createmin() {
 	var leftside=document.getElementById('leftside')
 	var img= document.createElement("img");
